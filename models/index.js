@@ -2,7 +2,9 @@
 
 
 
-const BlogArticle = require('./BlogArticles');
+const {
+    BlogArticles
+} = require('./BlogArticles');
 
 
-module.exports = BlogArticle;
+module.exports = BlogArticles;

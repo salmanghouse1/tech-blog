@@ -22,3 +22,5 @@ Categories.init({
         allowNull: false
     }
 })
+
+exports.module = Categories
