@@ -2,14 +2,14 @@
 
 // import model and datatypes
 const { Model, DataTypes } = require('sequelize');
-
+const bcrypt = require('bcrypt');
 
 //create class and extend it to model
 
-class Users extends Model {}
+class userData extends Model {}
 
 // initialize the model table or define
-Users.init({
+userData.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -30,6 +30,15 @@ Users.init({
         allowNull: false,
         validate: { isEmail: true }
     }
+}, {
+    hooks: {
+        async beforeCreate(userData) {
+            return bcrypt.hash(userData.password, 10).then(newUserData => {
+                return newUserData
+            });
+        },
+
+    }
 })
 
-module.exports = Users;
+module.exports = UserData;
