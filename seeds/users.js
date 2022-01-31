@@ -1,3 +1,20 @@
-const seedBlogArticles = () => blogArticles.bulkCreate(blogdata);
+//Create users model
 
-module.exports = seedBlogArticles;
+const { blogArticles } = require('../models');
+
+
+UsersData = [{
+
+    user_name: 'JohnDoe12',
+    password: 'myPassword12',
+    email: "JohnDoe12@gmail.com"
+}]
+
+
+
+const seedUsers = () => seedUsers.bulkCreate(UsersData);
+
+
+
+
+module.exports = seedUsers;
