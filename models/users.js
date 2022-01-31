@@ -1,7 +1,3 @@
-//create Blog Articles model here
-
-
-//  make sure to reference the category name and id
 //Create users model
 
 // import model and datatypes
@@ -10,10 +6,10 @@ const { Model, DataTypes } = require('sequelize');
 
 //create class and extend it to model
 
-class BlogArticles extends Model {}
+class Users extends Model {}
 
 // initialize the model table or define
-BlogArticles.init({
+Users.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -21,30 +17,19 @@ BlogArticles.init({
         primaryKey: true,
         validates: { isNumeric: true }
     },
-    article_name: {
+    user_name: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    aricle_image: {
+    password: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    aricle_short_description: {
+    email: {
         type: DataTypes.STRING,
-        allowNull: false
-    },
-    aricle_description: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    author: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    article_date: {
-        type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: { isEmail: true }
     }
 })
 
-exports.module = BlogArticles;
+module.exports = Users;
