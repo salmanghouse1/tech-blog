@@ -6,7 +6,11 @@ const bcrypt = require('bcrypt');
 
 //create class and extend it to model
 
-class userData extends Model {}
+class userData extends Model {
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
+}
 
 // initialize the model table or define
 userData.init({

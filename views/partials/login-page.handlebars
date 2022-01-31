@@ -1,9 +1,22 @@
-<div>
-<label>Email</label><input id="email" type="email"/>
 
-<label>Password</label><input id="password" type="password"/>
+<div class="row justify-space-between-md">
 
-<button>Login</button><button>Signup</button>
-</div>
+  <div class="login-card" id="loginFormHolder">
+    <h2 class="page-title">Login</h2>
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">Email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+      <div><button style="background:none;" id="signupLink" type="submit">Need An Account(Signup)</button></div>
+    </form>
+  </div>
 
-<script src="./js/login"></script>
+<script src="./js/login.js"></script>
