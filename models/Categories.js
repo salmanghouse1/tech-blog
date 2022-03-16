@@ -1,9 +1,9 @@
 //Create users model
-
 // import model and datatypes
 const { Model, DataTypes } = require('sequelize');
 
 
+const sequelize = require("../config/connection");
 //create class and extend it to model
 
 class Categories extends Model {}
@@ -21,6 +21,12 @@ Categories.init({
         type: DataTypes.STRING,
         allowNull: false
     }
+}, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'Categories',
 })
 
-exports.module = Categories
+module.exports = Categories

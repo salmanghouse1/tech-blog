@@ -6,7 +6,6 @@ Writing about tech can be just as important as making it. Developers spend plent
 
 a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. this site completely from scratch and deploy it to Heroku. app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
-
 ## User Story
 
 ```md
@@ -20,9 +19,9 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```md
 GIVEN a CMS-style blog site
 WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
+THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation✔️ links for the homepage and the dashboard; and the option to log in✔️
 WHEN I click on the homepage option
-THEN I am taken to the homepage
+THEN I am taken to the homepage✔️
 WHEN I click on any other links in the navigation
 THEN I am prompted to either sign up or sign in
 WHEN I choose to sign up
@@ -59,7 +58,6 @@ The following animation demonstrates the application functionality:
 
 ![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./Assets/14-mvc-homework-demo-01.gif)
 
-
 ## Getting Started
 
 application’s folder structure must follow the Model-View-Controller paradigm. used the [express-handlebars](https://www.npmjs.com/package/expresshandlebars) package to use Handlebars.js for Views, use the [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect to a MySQL database for your Models, and create an Express.js API for your Controllers.
@@ -72,7 +70,8 @@ You’ll also need the [dotenv package](https://www.npmjs.com/package/dotenv) to
 
 You are required to submit BOTH of the following for review:
 
-* The URL of the functional, deployed application.
+- The URL of the functional, deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
+# Neeed to include config connection files
